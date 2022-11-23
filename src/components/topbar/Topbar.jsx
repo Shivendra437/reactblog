@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./topbar.css";
 
 export default function Topbar() {
-  const user = true;
+  const user = false;
   return (
     <div className="top">
       <div className="topLeft">
@@ -25,6 +25,7 @@ export default function Topbar() {
               WRITE
             </Link>
           </li>
+
           {user && <li className="topListItem">LOGOUT</li>}
         </ul>
       </div>

@@ -14,14 +14,12 @@ function App() {
       <Topbar />
       <Routes>
         <Route path="/" exact element={<Homepage />} />
-        {/* <Route path="/posts"
-         element= {<Homepage />}/> */}
 
         <Route path="/register" element={user ? <Homepage /> : <Register />} />
         <Route path="/login" element={user ? <Homepage /> : <Login />} />
         {/* <Route path="/post/:id" element={<Single />} /> */}
-        <Route path="/write" element={user ? <Write /> : <Login />} />
-        <Route path="/settings" element={user ? <Settings /> : <Login />} />
+        <Route path="/write" element={user ? <Write /> : <Register />} />
+        <Route path="/settings" element={user ? <Settings /> : <Register />} />
         <Route path="/post/:postId" element={<Single />} />
       </Routes>
     </Router>
